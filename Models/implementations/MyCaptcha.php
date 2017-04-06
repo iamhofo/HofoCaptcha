@@ -25,6 +25,15 @@ class MyCaptcha implements MyCaptchaInterface
     private $phraseGenerator;
     private $imageGenerator;
 
+    /**
+     * MyCaptcha constructor.
+     * @param int $phraseLength
+     * @param int $widthPx
+     * @param int $heightPx
+     * @param $backgroundImage
+     * @param PhraseGeneratorInterface $phraseGenerator
+     * @param ImageGeneratorInterface $imageGenerator
+     */
     function __construct($phraseLength, $widthPx, $heightPx, $backgroundImage, PhraseGeneratorInterface $phraseGenerator, ImageGeneratorInterface $imageGenerator)
     {
         $this->phraseLength = $phraseLength;
@@ -40,8 +49,9 @@ class MyCaptcha implements MyCaptchaInterface
      */
     public function getImage()
     {
+        //TODO think about and implement better
         if ($this->heightPx <= 10 || $this->widthPx <= 10) {
-            throw new \InvalidArgumentException("Min dimenzije 10x10");
+            throw new \InvalidArgumentException("Min dimensions 10x10");
         }
         if (isset($this->image)) {
             return $this->image;
@@ -49,6 +59,9 @@ class MyCaptcha implements MyCaptchaInterface
         return $this->image = $this->imageGenerator->generate($this->widthPx, $this->heightPx, $this->getPhrase());
     }
 
+    /**
+     * @return string
+     */
     public function getPhrase()
     {
         if (isset($this->phrase)) {

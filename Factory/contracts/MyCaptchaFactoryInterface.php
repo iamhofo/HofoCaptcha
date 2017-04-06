@@ -6,6 +6,8 @@
  */
 namespace MyCaptcha\Factory;
 
+use MyCaptcha\Models\MyCaptchaInterface;
+
 interface MyCaptchaFactoryInterface
 {
     /**

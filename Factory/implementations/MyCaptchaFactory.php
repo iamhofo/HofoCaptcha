@@ -22,7 +22,3 @@ class MyCaptchaFactory implements MyCaptchaFactoryInterface
         return new MyCaptcha($phraseLength, $widthPx, $heightPx, $backgroundImage, new PhraseGenerator(), new ImageGenerator());
     }
 }
-
-//$captcha = MyCaptchaFactory::create(2,2,2);
-//
-//$captcha->

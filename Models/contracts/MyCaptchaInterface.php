@@ -1,5 +1,4 @@
 <?php
-
 /**
  * User: John
  * Date: 1.4.2017

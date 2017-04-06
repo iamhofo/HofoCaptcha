@@ -13,6 +13,9 @@ class ImageGenerator implements ImageGeneratorInterface
 {
     public function generate($widthPx, $heightPx, $phrase)
     {
+
+        //TODO actual captcha, this is just colored text on background
+
         $fonts = array();
         $fontsDirectory = __DIR__ . "/../../fonts";
         foreach (new \DirectoryIterator($fontsDirectory) as $file){
@@ -25,6 +28,7 @@ class ImageGenerator implements ImageGeneratorInterface
         $bg = imagecolorallocate($image, rand(230, 255), rand(230, 255), rand(230, 255));
         imagefill($image,0,0,$bg);
         $fontColor = imagecolorallocate($image, rand(30, 155), rand(30, 155), rand(30, 155));
+        //TODO fix fontfile, currently hard-coded
         imagettftext($image, 22, rand(0, 30), $widthPx - ($widthPx - rand(10,40) ), $heightPx - rand(10,30), $fontColor, __DIR__ . "/../../fonts/arial.ttf", $phrase);
         ob_start();
         imagefilter($image, IMG_FILTER_MEAN_REMOVAL);

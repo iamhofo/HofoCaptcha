@@ -27,6 +27,8 @@ header("Content-Type: image/png");
  * VI. Return result to user
  */
 
+//TODO Proper tests
+
 $test = new \MyCaptcha\Factory\MyCaptchaFactory();
 
 $captcha = $test->create();

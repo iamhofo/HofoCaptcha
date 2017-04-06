@@ -12,21 +12,18 @@ require_once __DIR__ . "/../contracts/PhraseGeneratorInterface.php";
 class PhraseGenerator implements PhraseGeneratorInterface
 {
     /**
-     * @param int $lenght
+     * @param int $length
      * @param string $charset
      * @return string
      */
-    public function generate($lenght = 5, $charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789')
+    public function generate($length = 5, $charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789')
     {
         $phrase = '';
         $characters = str_split($charset);
 
-        for($i=0;$i<$lenght;$i++){
+        for($i=0; $i<$length; $i++){
             $phrase .= $characters[array_rand($characters)];
         }
         return $phrase;
     }
 }
-
-//$as = new PhraseBuilder();
-//echo $as->build();
