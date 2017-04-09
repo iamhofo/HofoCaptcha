@@ -2,7 +2,7 @@
 Unfinished version of pointless captcha. Not meant for usage.
 
 # How to use:
-
+```
 require_once __DIR__ . "/Factory/implementations/MyCaptchaFactory.php";
 
 $captchaFactory = new \MyCaptcha\Factory\MyCaptchaFactory();
@@ -16,3 +16,4 @@ $image = $captcha->getImage();
 
 $phrase = $captcha->getPhrase();
 //returns phrase in string
+```
