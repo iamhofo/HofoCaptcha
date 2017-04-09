@@ -1,5 +1,9 @@
 # HofoCaptcha
-Unfinished version of pointless captcha. Not meant for usage.
+Unfinished version of pointless captcha. **Not meant for usage.**
+
+![Captchas examples](http://i.imgur.com/ddEfU8U.png)
+
+
 
 # How to use:
 ```
@@ -17,3 +21,7 @@ $image = $captcha->getImage();
 $phrase = $captcha->getPhrase();
 //returns phrase in string
 ```
+
+If you're looking for a good way to ensure your website is safe against bots, I recommend using google recaptcha.
+
+I will keep updating this periodically.
