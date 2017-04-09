@@ -13,6 +13,14 @@ namespace MyCaptcha\Models;
  */
 interface MyCaptchaInterface
 {
+
+    /**
+     * @return mixed
+     */
     public function getImage();
+
+    /**
+     * @return string
+     */
     public function getPhrase();
 }
