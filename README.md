@@ -24,4 +24,5 @@ $phrase = $captcha->getPhrase();
 
 If you're looking for a good way to ensure your website is safe against bots, I recommend using Google reCAPTCHA.
 
-I will keep updating this periodically.
+~~I will keep updating this periodically.~~
+I lied.
